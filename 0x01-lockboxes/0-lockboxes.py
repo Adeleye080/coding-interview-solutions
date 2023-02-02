@@ -28,5 +28,4 @@ def canUnlockAll(boxes):
     for key in keys:
         if key >= len(boxes):
             keys.remove(key)
-    print(keys)
     return False if len(keys) < (len(boxes) - 1) else True
