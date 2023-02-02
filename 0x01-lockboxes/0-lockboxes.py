@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ LockBoxex Interview Challenge """
 
+
 def canUnlockAll(boxes):
     """
     determine if all boxes can be opened or not
@@ -15,7 +16,7 @@ def canUnlockAll(boxes):
         else:
             keys.append(key)
 
-    for i in range(1, (len(boxes) -1)):
+    for i in range(1, (len(boxes) - 1)):
         if i in keys:
             for key_in_box in boxes[i]:
                 if key_in_box not in keys:
