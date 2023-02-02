@@ -9,6 +9,8 @@ def canUnlockAll(boxes):
         True: all boxes can be opened
         False: not all boxes can be opened
     """
+    if len(boxes) == 0:
+        return False
     if len(boxes) == 1:
         return True
 
@@ -28,4 +30,5 @@ def canUnlockAll(boxes):
     for key in keys:
         if key >= len(boxes):
             keys.remove(key)
+    keys.append(0)
     return False if len(keys) < (len(boxes) - 1) else True
