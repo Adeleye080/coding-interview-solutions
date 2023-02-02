@@ -21,7 +21,7 @@ def canUnlockAll(boxes):
         else:
             keys.append(key)
 
-    for i in range(1, (len(boxes) - 1)):
+    for i in range(1, len(boxes)):
         if i in keys:
             for key_in_box in boxes[i]:
                 if key_in_box not in keys and key_in_box != 0:
