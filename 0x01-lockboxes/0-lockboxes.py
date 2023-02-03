@@ -11,8 +11,10 @@ def canUnlockAll(boxes):
     """
     if len(boxes) == 0:
         return False
-    if len(boxes[0]) == 0:
+    if len(boxes[0]) == 0 and len(boxes) == 1:
         return True
+    elif len(boxes[0]) == 0 and len(boxes) > 1:
+        return False
     keys = [key for key in boxes[0]]
     keys.append(0)
 
