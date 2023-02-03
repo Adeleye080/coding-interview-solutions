@@ -1,3 +1,6 @@
+""" Lockboxes Challenge """
+
+
 def canUnlockAll(boxes):
     '''determines if all the boxes can be opened or not
     Returns:
@@ -26,4 +29,3 @@ def canUnlockAll(boxes):
         if i not in opened_boxes and i != 0:
             return False
     return True
-
