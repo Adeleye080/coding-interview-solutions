@@ -3,11 +3,17 @@
 
 
 def canUnlockAll(boxes):
+    """
+    Determines if all boxes can be unlocked
+    Returns:
+        True: all boxes can be unlocked
+        False: not all boxes can be opened
+    """
     if len(boxes) == 0:
         return False
     if len(boxes[0]) == 0:
         return True
-    keys = [ key for key in boxes[0] ]
+    keys = [key for key in boxes[0]]
     keys.append(0)
 
     track = 0
@@ -17,7 +23,7 @@ def canUnlockAll(boxes):
                 try:
                     for key in boxes[box_key]:
                         keys.append(key)
-                except:
+                except Exception:
                     pass
         track = track + 1
 
