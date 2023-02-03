@@ -1,37 +1,29 @@
-#!/usr/bin/python3
-""" LockBoxex Interview Challenge """
-
-
 def canUnlockAll(boxes):
-    """
-    Determines if all boxes can be unlocked
+    '''determines if all the boxes can be opened or not
     Returns:
-        True: all boxes can be unlocked
+        True: all boxes can be opened
         False: not all boxes can be opened
-    """
-    if len(boxes) == 0:
-        return False
-    if len(boxes[0]) == 0 and len(boxes) == 1:
-        return True
-    elif len(boxes[0]) == 0 and len(boxes) > 1:
-        return False
-    keys = [key for key in boxes[0]]
-    keys.append(0)
+    '''
+    length = len(boxes)
+    keys = set()
+    opened_boxes = []
+    i = 0
 
-    track = 0
-    while track < len(boxes):
-        for box_key in boxes[track]:
-            if box_key in keys:
-                try:
-                    for key in boxes[box_key]:
-                        keys.append(key)
-                except Exception:
-                    pass
-        track = track + 1
+    while i < length:
+        oldi = i
+        opened_boxes.append(i)
+        keys.update(boxes[i])
+        for key in keys:
+            if key != 0 and key < length and key not in opened_boxes:
+                i = key
+                break
+        if oldi != i:
+            continue
+        else:
+            break
 
-    keys = list(set(keys))
-    for key in keys:
-        if key >= len(boxes):
-            keys.remove(key)
+    for i in range(length):
+        if i not in opened_boxes and i != 0:
+            return False
+    return True
 
-    return True if len(keys) == len(boxes) else False
