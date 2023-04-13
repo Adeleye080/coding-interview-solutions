@@ -6,12 +6,6 @@ This module provides a solution to the Prime Game problem.
 def check_primes(n):
     """
     Return a list of prime numbers between 1 and n, inclusive.
-    
-    Args:
-        n (int): Upper bound of the range; lower bound is always 1.
-
-    Returns:
-        List[int]: A list of prime numbers between 1 and n, inclusive.
     """
     primes_list = []
     sieve = [True] * (n + 1)
@@ -26,13 +20,6 @@ def check_primes(n):
 def isWinner(x, nums):
     """
     Determine the winner of the Prime Game.
-
-    Args:
-        num_rounds (int): Number of rounds in the game.
-        upper_limits (List[int]): List of upper limits of the range for each round.
-
-    Returns:
-        Optional[str]: Name of the winner (Maria or Ben) or None if the winner cannot be found.
     """
     if x is None or nums is None or x == 0 or nums == []:
         return None
