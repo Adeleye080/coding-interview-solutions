@@ -3,7 +3,7 @@
 This module provides a solution to the Prime Game problem.
 """
 
-def check_primes(n: int) -> List[int]:
+def check_primes(n):
     """
     Return a list of prime numbers between 1 and n, inclusive.
     
@@ -23,7 +23,7 @@ def check_primes(n: int) -> List[int]:
     return primes_list
 
 
-def isWinner(num_rounds: int, upper_limits: List[int]) -> Optional[str]:
+def isWinner(x, nums):
     """
     Determine the winner of the Prime Game.
 
@@ -34,13 +34,13 @@ def isWinner(num_rounds: int, upper_limits: List[int]) -> Optional[str]:
     Returns:
         Optional[str]: Name of the winner (Maria or Ben) or None if the winner cannot be found.
     """
-    if num_rounds is None or upper_limits is None or num_rounds == 0 or upper_limits == []:
+    if x is None or nums is None or x == 0 or nums == []:
         return None
 
     maria_score = 0
     ben_score = 0
-    for i in range(num_rounds):
-        primes_list = check_primes(upper_limits[i])
+    for i in range(x):
+        primes_list = check_primes(nums[i])
         if len(primes_list) % 2 == 0:
             ben_score += 1
         else:
