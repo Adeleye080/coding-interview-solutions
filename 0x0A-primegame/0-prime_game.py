@@ -3,6 +3,7 @@
 This module provides a solution to the Prime Game problem.
 """
 
+
 def check_primes(n):
     """
     Return a list of prime numbers between 1 and n, inclusive.
@@ -39,4 +40,3 @@ def isWinner(x, nums):
         return 'Ben'
     else:
         return None
-
