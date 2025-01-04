@@ -7,13 +7,13 @@ Welcome to the **Interview Coding Questions Solutions** repository! This reposit
 
 ## 📚 Contents
 
-- [Introduction](#introduction)  
-- [Features](#features)  
-- [Structure of the Repository](#structure-of-the-repository)  
-- [How to Use](#how-to-use)  
-- [Topics Covered](#topics-covered)  
-- [Tools & Technologies](#tools--technologies)  
-- [Contributing](#contributing)  
+- [Introduction](#-introduction)  
+- [Features](#-features)  
+- [Structure of the Repository](#-structure-of-the-repository)  
+- [How to Use](#-how-to-use)  
+- [Topics Covered](#-topics-covered)  
+- [Tools & Technologies](#-tools--technologies)  
+- [Contributing](#-contributing)  
 
 <br />
 
